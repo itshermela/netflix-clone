@@ -1,22 +1,20 @@
 import React from "react"
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom"
+import {createBrowserRouter, RouterProvider } from "react-router-dom"
 import * as ConstantRoutes from "./constants/routes"
-import Home from "./pages/home"
+import { Home, Signin } from "./pages"
 
+const router = createBrowserRouter([
+  {
+    path: ConstantRoutes.SIGN_IN,
+    element: <Signin />,
+  },
+  {
+    path: "/",
+    element: <Home />,
+  },
+]);
 export function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path={ConstantRoutes.SIGN_IN}>
-        </Route>
-        <Route path={ConstantRoutes.SIGN_UP}>
-        </Route>
-        <Route path={ConstantRoutes.BROWSE}>
-        </Route>
-        <Route path={ConstantRoutes.HOME}  element ={<Home/>}>
-        </Route>
-      </Routes>
-    </Router>
-    
+    <RouterProvider router={router} /> 
   )
 }

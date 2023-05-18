@@ -1,7 +1,7 @@
 import React from "react"
 import {createBrowserRouter, RouterProvider } from "react-router-dom"
 import * as ConstantRoutes from "./constants/routes"
-import { Home, Signin } from "./pages"
+import { Home, Signin, Signup, Browse } from "./pages"
 
 const router = createBrowserRouter([
   {
@@ -9,7 +9,15 @@ const router = createBrowserRouter([
     element: <Signin />,
   },
   {
-    path: "/",
+    path: ConstantRoutes.SIGN_UP,
+    element: <Signup />,
+  },
+  {
+    path: ConstantRoutes.BROWSE,
+    element: <Browse />,
+  },
+  {
+    path: ConstantRoutes.HOME,
     element: <Home />,
   },
 ]);

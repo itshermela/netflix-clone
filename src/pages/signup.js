@@ -1,10 +1,15 @@
-import React, {useState} from "react"
+import React, {useState, useContext} from "react"
+import {useNavigate} from "react-router-dom"
 import { HeaderContainer } from "../containers/header"
 import { FooterContainer } from "../containers/footer"
 import { Form } from "../components"
-// import * as ConstantRoutes from "./constants/routes"
+import * as ConstantRoutes from "../constants/routes"
+import { FirebaseContext } from "../context/firebase"
 
 export default function Signup() {
+    const navigate = useNavigate()
+    const {firebase} = useContext(FirebaseContext)
+    
     const [firstName, setFirstName] = useState('')
     const [error, setError] = useState('')
     const [emailAddress, setEmailAddress] = useState('')
@@ -15,6 +20,24 @@ export default function Signup() {
     const handleSignup = (event) => {
         event.preventDefault()
 
+        firebase
+            .auth()
+            .createUserWithEmailAndPassword(emailAddress, password)
+            .then((result) =>
+                result.user
+                .updateProfile({
+                    displayName: firstName,
+                    photoURL: Math.floor(Math.random() * 5) + 1,
+                })
+                .then(() => {
+                    navigate.push(ConstantRoutes.BROWSE)
+                })
+            )
+            .catch((error) => {
+                setEmailAddress('')
+                setPassword('')
+                setError(error.message)
+            })
     }
     return (
         <>

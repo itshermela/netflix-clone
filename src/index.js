@@ -1,11 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { GlobalStyles } from './global-styles'
-import {App} from './App'
+import { App } from './App'
 import reportWebVitals from './reportWebVitals'
-import {FirebaseContext} from './context/firebase'
-import { initializeApp } from "firebase/app"
-import { getAnalytics } from "firebase/analytics"
+import { FirebaseContext } from './context/firebase'
+import firebase from 'firebase/compat/app'
+import 'firebase/compat/firestore'
+import 'firebase/compat/auth'
+// import { seedDatabase } from './seed'
 
 const config = {
   apiKey: "AIzaSyC9fhbSo-z3aHJZBl2SA6J6-dMTfAF1kAQ",
@@ -16,14 +18,16 @@ const config = {
   appId: "1:1030194605717:web:38cc41c5fa440265ed759c",
   measurementId: "G-Y0JH43CM7L"
 }
+
 // Initialize Firebase
-const app = initializeApp(config);
-const analytics = getAnalytics(app);
+firebase.initializeApp(config)
+// seedDatabase(firebase)
+
 const root = ReactDOM.createRoot(document.getElementById('root'))
 
 root.render(
   <React.StrictMode>
-    <FirebaseContext.Provider value={{ firebase: window.firebase }}>
+    <FirebaseContext.Provider value={{ firebase: firebase }}>
     <GlobalStyles />
     <App />
     </FirebaseContext.Provider>

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
 export const Container = styled.div`
     display: flex;
@@ -7,7 +7,7 @@ export const Container = styled.div`
     align-items: center;
     margin: auto;
     max-width: 80%;
-`;
+`
 
 export const Title = styled.h1`
     width: 100%;
@@ -15,14 +15,14 @@ export const Title = styled.h1`
     font-size: 48px;
     text-align: center;
     font-weight: 500;
-`;
+`
 
 export const List = styled.ul`
     padding: 0;
     margin: 0;
     display: flex;
     flex-direction: row;
-`;
+`
 
 export const Name = styled.p`
     color: #808080;
@@ -33,7 +33,7 @@ export const Name = styled.p`
         font-weight: bold;
         color: #e5e5e5;
     }
-`;
+`
 
 export const Picture = styled.img`
     width: 100%;
@@ -41,7 +41,7 @@ export const Picture = styled.img`
     height: auto;
     border: 3px solid black;
     cursor: pointer;
-`;
+`
 
 export const Item = styled.li`
     max-height: 200px;
@@ -62,4 +62,4 @@ export const Item = styled.li`
     &:last-of-type {
         margin-right: 0;
     }
-`;
+`

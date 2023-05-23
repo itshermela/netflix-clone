@@ -19,7 +19,7 @@ export function SelectProfileContainer({user, setProfile}) {
                 <Profiles.List>
                     <Profiles.User onClick={() => setProfile({
                         displayName: user.displayName,
-                        photoURL: user.ph
+                        photoURL: user.photoURL
                     })}
                     >
                         <Profiles.Picture src={user.photoURL} />

@@ -1,6 +1,7 @@
 # Netflix Clone App
 - This is a Netflix clone application made with React (and JavaScript ES6+).
 - Some techniques explored in this project are:
+
       -  React Router
       -  custom hooks
       -  Context API

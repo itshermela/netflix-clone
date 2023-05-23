@@ -11,9 +11,11 @@
 
 ![image](https://github.com/itshermela/netflix-clone/assets/57627375/78a093b4-7a7d-40fc-984e-08c24ac56e5b)
 
-![image](https://github.com/itshermela/netflix-clone/assets/57627375/84b9715a-143f-4913-aca2-752069b7377c)
+![image](https://github.com/itshermela/netflix-clone/assets/57627375/2b0528b4-4798-4808-98ca-6972b11a70b4)
 
 ![image](https://github.com/itshermela/netflix-clone/assets/57627375/924d68b0-4377-414f-91dd-fdd65b2132ab)
+
+![image](https://github.com/itshermela/netflix-clone/assets/57627375/d11973cd-0efa-42b2-acde-b7cbd319dd58)
 
 
 # Quick Start

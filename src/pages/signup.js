@@ -33,10 +33,10 @@ export default function Signup() {
                     navigate.push(ConstantRoutes.BROWSE)
                 })
             )
-            .catch((error) => {
+            .catch(() => {
                 setEmailAddress('')
                 setPassword('')
-                setError(error.message)
+                setError("Invalid email. Please try again.")
             })
     }
     return (

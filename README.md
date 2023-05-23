@@ -1,5 +1,6 @@
 # Netflix Clone App
-- This is a Netflix clone application made with React Js.
+- This is a Netflix clone application made with React (and JavaScript ES6+).
+- Some techniques explored in this project include React Router, custom hooks, Context API, and compound functional components.
 - Compound Components are used to ease the way for a parent component to communicate with its children.
 - Styled Components are used for the CSS implementation.
 
